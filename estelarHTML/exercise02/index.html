@@ -7,38 +7,45 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Uma tabela relativamente complexa para treinamento de elementos table-->
+
     <table>
       <caption>
         Produzidos x Vendidos
       </caption>
+
       <colgroup>
         <col />
         <col style="background-color: red" span="2" />
         <col style="background-color: blue" span="2" />
       </colgroup>
+
       <thead>
         <tr>
           <th rowspan="2"></th>
-          <th colspan="2">Voluntários da Franca</th>
-          <th colspan="2">Estação</th>
+          <th colspan="2" scope="colgroup">Voluntários da Franca</th>
+          <th colspan="2" scope="colgroup">Estação</th>
         </tr>
+
         <tr>
-          <th>Produzidos</th>
-          <th>Vendidos</th>
-          <th>Produzidos</th>
-          <th>Vendidos</th>
+          <th scope="col">Produzidos</th>
+          <th scope="col">Vendidos</th>
+          <th scope="col">Produzidos</th>
+          <th scope="col">Vendidos</th>
         </tr>
       </thead>
+
       <tbody>
         <tr>
-          <th>Ovos de Pascoa</th>
+          <th scope="row">Ovos de Pascoa</th>
           <td>50</td>
           <td>30</td>
           <td>60</td>
           <td>57</td>
         </tr>
+
         <tr>
-          <th>Coelhos de Chocolate</th>
+          <th scope="row">Coelhos de Chocolate</th>
           <td>40</td>
           <td>40</td>
           <td>70</td>
