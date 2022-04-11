@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+/*header {
+  border: 7px dashed rgb(3, 143, 199);
+  height: 100px;
+  padding: 16px;
+}*/
+
+main {
+  padding: 10px;
+  border: 7px dashed rgb(3, 143, 199);
+  color: inherit;
+  background-color: rgb(55, 100, 50);
+  background-image: url(http://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80px;
+  background-attachment: fixed;
+
+  background: linear-gradient(45deg, white, rgba(0, 183, 255, 0.2)),
+    url(http://source.unsplash.com/random) no-repeat right top / cover
+      padding-box scroll;
+}
