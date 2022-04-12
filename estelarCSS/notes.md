@@ -83,7 +83,7 @@ p {
 	-o-background-clip: text; /* Opera */
 }
 
-**`Condultas`**
+**`Consultas`**
 
 https://ireade.github.io/which-vendor-prefix
 
