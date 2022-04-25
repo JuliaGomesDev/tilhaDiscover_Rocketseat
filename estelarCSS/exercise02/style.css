@@ -1,20 +1,22 @@
-/* * {
+* {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+}
+
+/* Estilização para display flex */
+
+/* body {
+  display: flex;
+  align-items: center;
+  width: 100vh;
+}
 
 .box {
   width: 50px;
   height: 50px;
-  margin-bottom: 8px;
 }
 
 .box1 {
   background-color: red;
-  position: absolute;
-  left: 0px;
-  top: 0px;
 }
 
 .box2 {
@@ -23,4 +25,48 @@
 
 .box3 {
   background-color: blue;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-bottom: 20px;
+} */
+
+/* Estilização para display gird */
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+  grid-template-rows: 30px 1fr 40px;
+  grid-template-columns: 300px 1fr;
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(243, 161, 161);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(173, 235, 235);
+}
+
+aside {
+  grid-area: aside;
+  background-color: rgb(189, 189, 189);
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(250, 183, 102);
 }
