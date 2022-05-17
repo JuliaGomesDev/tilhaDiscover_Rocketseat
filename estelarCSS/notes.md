@@ -7,7 +7,6 @@ inline > tag style > tag link
 É um cálculo, onde, cada tipo de seletor e origem de estilo, possuem valores a serem
 considerados
 
-<!-- prettier-ignore -->
 0. Universal selector, combinators e negation pseudo-class (:not())
 1. Element type selector e pseudo-elements (::before, ::after)
 10. Classes e atribute selectors ([type="radio"])
@@ -54,7 +53,7 @@ Sobrescreve tudo, contudo não é uma boa prática
 
 ## Exemplos comuns 
 
-- @important /* incluir um CSS externo */ 
+- @import /* incluir um CSS externo */ 
 - @media /* regras condicionais para dispositivos */
 - @font-face /* fontes externas */
 - @keyframes /* Animation */

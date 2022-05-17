@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Action = para onde será enviado o formulário-->
+    <!-- Get = método de retorno dos dados enviados -->
+    <form action="" method="get">
+      <!-- Datalist = Lista de dados para selecão em um input de dados. Sempre está relacionado à um input -->
+      <input type="text" list="fruitsdata" placeholder="Escolha uma fruta" />
+
+      <datalist id="fruitsdata">
+        <option>Maçã</option>
+        <option>Banana</option>
+        <option>Uva</option>
+        <option>Melância</option>
+        <option>Laranja</option>
+      </datalist>
+
+      <input type="color" list="colordata" placeholder="Escolha uma cor" />
+
+      <datalist id="colordata">
+        <option>#ff0000</option>
+        <option>#00ff00</option>
+        <option>#0000ff</option>
+      </datalist>
+
+      <!-- <input> Atributos comuns
+
+          - autocomplete - completa conforme frequência de uso
+          - autofocus - foco
+          - disabled - não permite alterações
+          - readonly - não permite alterações, mas mantem o aspecto de ativo
+          - value - valor do input
+          - form - submeter uma tag de formulário que esteja fora do <form> (quase todos)
+          - required - dado obrigatório (quase todos)
+          - placeholder - (password, search, tel, text, url) (quase todos)
+      -->
+
+      <input type="email" placeholder="Digite seu email" />
+    </form>
+  </body>
+</html>
