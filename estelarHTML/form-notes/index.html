@@ -42,7 +42,54 @@
           - placeholder - (password, search, tel, text, url) (quase todos)
       -->
 
-      <input type="email" placeholder="Digite seu email" />
+      <input type="text" placeholder="Digite seu nome" />
+
+      <!-- <input> Atributo password 
+      
+      - minlength - número mínimo de caracteres para o campo
+      - maxlength - número máximo de caracteres para o campo
+      - size - tamanho do campo visualmente
+      - pattern - expressão regular para validar o que está sendo digitado no campo [regra]{min,max}
+      - title - acompanha as mensagens de alerta no box password
+      - placeholder - informação no campo do que deve ser realizado
+      - disabled - não permite alterações
+      - readonly - não permite alterações, mas mantem o aspecto de ativo
+      - required - dado obrigatório
+      - inputmode - habilita o teclado em smartphone
+      - autocomplete 
+            * on - permite a sugestão de: new-password ou current-password
+            * off - desabilita a opção de autocompletar
+            * new-password - o navegador poderá sugerir uma nova senha
+      -->
+
+      <input
+        type="password"
+        title="Insira uma senha com no mínimo 2 caracteres"
+        placeholder="informe a sua senha"
+      />
+      <button type="submit">Enviar</button>
+
+      <!-- <input> Atributo e-mail
+      
+      - placeholder - informação no campo do que deve ser realizado
+      - disabled - não permite alterações
+      - readonly - não permite alterações, mas mantem o aspecto de ativo
+      - value - valor do input
+      - required - dado obrigatório
+      - multople - permite colocar mais de um e-mail separado por virgulas
+      - minlength - número mínimo de caracteres para o campo
+      - maxlength - número máximo de caracteres para o campo
+      - size - tamanho do campo visualmente
+      - pattern - expressão regular para validar o que está sendo digitado no campo .+dominio\.com\.br
+      -->
+
+      <input
+        type="email"
+        placeholder="Informe seu email"
+        pattern=".+dominio\.com\.br"
+        title="Apenas e-mails no dominio 'dominio'serão aceitos"
+      />
+      <button type="submit">Enviar</button>
     </form>
   </body>
 </html>
