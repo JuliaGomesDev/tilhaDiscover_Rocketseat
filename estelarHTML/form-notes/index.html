@@ -5,13 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        gap: 10px;
+
+        background-color: rgb(164, 223, 243);
+        box-sizing: border-box;
+
+        padding: 20px;
+      }
+
+      input {
+        padding: 3px;
+      }
+    </style>
   </head>
   <body>
-    <!-- Action = para onde será enviado o formulário-->
-    <!-- Get = método de retorno dos dados enviados -->
-    <form action="" method="get">
-      <!-- Datalist = Lista de dados para selecão em um input de dados. Sempre está relacionado à um input -->
+    <form action="" method="post" enctype="multipart/form-data">
+      <!-- Datalist -->
       <input type="text" list="fruitsdata" placeholder="Escolha uma fruta" />
 
       <datalist id="fruitsdata">
@@ -22,6 +37,50 @@
         <option>Laranja</option>
       </datalist>
 
+      <!-- input básico -->
+      <input type="text" placeholder="Digite seu nome" />
+
+      <!-- Atributo password  -->
+
+      <input
+        type="password"
+        title="Insira uma senha com no mínimo 2 caracteres"
+        placeholder="informe a sua senha"
+      />
+
+      <!-- Atributo e-mail -->
+
+      <datalist id="emailList">
+        <option>julia@dominio.com.br</option>
+      </datalist>
+
+      <input
+        type="email"
+        placeholder="Informe seu email"
+        pattern=".+dominio\.com\.br"
+        title="Apenas e-mails dominio.com.br serão aceitos"
+        list="emailList"
+      />
+
+      <!-- Atributo url -->
+      <datalist id="urlList">
+        <option>https://exemplo.com.br</option>
+      </datalist>
+
+      <input
+        type="url"
+        placeholder="https://exemplo.com.br"
+        pattern=".*\.com\.br\.*"
+        title="Somente domínios .com.br serão aceitos"
+        required
+        list="urlList"
+      />
+
+      <!-- Atributo file - method post -->
+
+      <input type="file" accept="image/*" multiple />
+
+      <!-- Atributo color -->
       <input type="color" list="colordata" placeholder="Escolha uma cor" />
 
       <datalist id="colordata">
@@ -30,65 +89,6 @@
         <option>#0000ff</option>
       </datalist>
 
-      <!-- <input> Atributos comuns
-
-          - autocomplete - completa conforme frequência de uso
-          - autofocus - foco
-          - disabled - não permite alterações
-          - readonly - não permite alterações, mas mantem o aspecto de ativo
-          - value - valor do input
-          - form - submeter uma tag de formulário que esteja fora do <form> (quase todos)
-          - required - dado obrigatório (quase todos)
-          - placeholder - (password, search, tel, text, url) (quase todos)
-      -->
-
-      <input type="text" placeholder="Digite seu nome" />
-
-      <!-- <input> Atributo password 
-      
-      - minlength - número mínimo de caracteres para o campo
-      - maxlength - número máximo de caracteres para o campo
-      - size - tamanho do campo visualmente
-      - pattern - expressão regular para validar o que está sendo digitado no campo [regra]{min,max}
-      - title - acompanha as mensagens de alerta no box password
-      - placeholder - informação no campo do que deve ser realizado
-      - disabled - não permite alterações
-      - readonly - não permite alterações, mas mantem o aspecto de ativo
-      - required - dado obrigatório
-      - inputmode - habilita o teclado em smartphone
-      - autocomplete 
-            * on - permite a sugestão de: new-password ou current-password
-            * off - desabilita a opção de autocompletar
-            * new-password - o navegador poderá sugerir uma nova senha
-      -->
-
-      <input
-        type="password"
-        title="Insira uma senha com no mínimo 2 caracteres"
-        placeholder="informe a sua senha"
-      />
-      <button type="submit">Enviar</button>
-
-      <!-- <input> Atributo e-mail
-      
-      - placeholder - informação no campo do que deve ser realizado
-      - disabled - não permite alterações
-      - readonly - não permite alterações, mas mantem o aspecto de ativo
-      - value - valor do input
-      - required - dado obrigatório
-      - multople - permite colocar mais de um e-mail separado por virgulas
-      - minlength - número mínimo de caracteres para o campo
-      - maxlength - número máximo de caracteres para o campo
-      - size - tamanho do campo visualmente
-      - pattern - expressão regular para validar o que está sendo digitado no campo .+dominio\.com\.br
-      -->
-
-      <input
-        type="email"
-        placeholder="Informe seu email"
-        pattern=".+dominio\.com\.br"
-        title="Apenas e-mails no dominio 'dominio'serão aceitos"
-      />
       <button type="submit">Enviar</button>
     </form>
   </body>
