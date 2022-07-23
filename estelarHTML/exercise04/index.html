@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+
+    <style>
+      form {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        background-color: rgb(164, 223, 243);
+        box-sizing: border-box;
+
+        padding: 20px 0;
+      }
+
+      input {
+        padding: 3px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post" enctype="multipart/form-data">
+      <div class="container">
+        <!-- Datalist -->
+        <input type="text" list="fruitsdata" placeholder="Escolha uma fruta" />
+
+        <datalist id="fruitsdata">
+          <option>Maçã</option>
+          <option>Banana</option>
+          <option>Uva</option>
+          <option>Melância</option>
+          <option>Laranja</option>
+        </datalist>
+
+        <!-- input básico -->
+        <input type="text" placeholder="Digite seu nome" />
+
+        <!-- Atributo password  -->
+
+        <input
+          type="password"
+          title="Insira uma senha com no mínimo 2 caracteres"
+          placeholder="informe a sua senha"
+        />
+
+        <!-- Atributo e-mail -->
+        <datalist id="emailList">
+          <option>julia@dominio.com.br</option>
+        </datalist>
+
+        <input
+          type="email"
+          placeholder="Informe seu email"
+          pattern=".+dominio\.com\.br"
+          title="Apenas e-mails dominio.com.br serão aceitos"
+          list="emailList"
+        />
+
+        <!-- Atributo url -->
+        <datalist id="urlList">
+          <option>https://exemplo.com.br</option>
+        </datalist>
+
+        <input
+          type="url"
+          placeholder="https://exemplo.com.br"
+          pattern=".*\.com\.br\.*"
+          title="Somente domínios .com.br serão aceitos"
+          required
+          list="urlList"
+        />
+
+        <!-- Atributo file - method post -->
+        <input type="file" accept="image/*" multiple />
+
+        <!-- Atributo color -->
+        <input type="color" list="colordata" placeholder="Escolha uma cor" />
+
+        <datalist id="colordata">
+          <option>#ff0000</option>
+          <option>#00ff00</option>
+          <option>#0000ff</option>
+        </datalist>
+
+        <button type="submit">Enviar</button>
+
+        <!-- Atributo checkbox -->
+        <fieldset>
+          <legend>Choose your interest</legend>
+          <div>
+            <input type="checkbox" name="interest" id="games" value="ok" />
+            <label for="games">Games</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interest" id="music" value="ok" />
+            <label for="games">Music</label>
+          </div>
+        </fieldset>
+
+        <!-- Atributo hidden
+        - Passar uma informação para o backend do form-->
+        <input type="hidden" name="id" value="8" />
+      </div>
+
+      <div class="container">
+        <!-- Atributo radio -->
+        <fieldset>
+          <legend>Você vai ver o Thor</legend>
+          <label for="yep">Sim</label>
+          <input type="radio" name="cinema" id="yep" value="yes" />
+
+          <label for="yep">Não</label>
+          <input type="radio" name="cinema" id="no" value="no" />
+        </fieldset>
+
+        <!-- Textarea -->
+        <textarea
+          name="message"
+          cols="40"
+          rows="10"
+          id="message"
+          placeholder="Escreva aqui sua mensagem insignificante"
+        ></textarea>
+
+        <!-- Select -->
+        <label for="selectCar">Qual é o seu carro?</label>
+        <select name="carmodel" id="selectCar" pla>
+          <option value="">Selecione um veículo</option>
+          <option value="fiat">Uno</option>
+          <option value="audi">A3</option>
+          <option value="bmw">X6</option>
+        </select>
+
+        <!-- Optgroup -->
+        <label
+          >Selecione elementos da sua rotina <br />
+          <select name="rotine" id="selectRotine" multiple>
+            <optgroup label="Manhã">
+              <option value="banho">Tomar Banho</option>
+              <option value="exercicios">Praticar exercícios</option>
+              <option value="ler">Ler um livro</option>
+              <option value="meditar">Meditar</option>
+              <option value="estudar">Estudar</option>
+            </optgroup>
+            <optgroup label="Tarde"></optgroup>
+            <option value="trabalhar">Trabalhar</option>
+            <option value="especializar">Especializar-se</option>
+            <optgroup label="Noite">
+              <option value="cuidados">Cuidar do corpo/mente</option>
+              <option value="exercicios">Alongar-se</option>
+              <option value="entretenimento">Entreter-se</option>
+            </optgroup>
+          </select>
+        </label>
+      </div>
+      <div class="container">
+        <!-- Search -->
+        <datalist id="codProdutos">
+          <option>001</option>
+          <option>002</option>
+          <option>003</option>
+          <option>004</option>
+        </datalist>
+
+        <input
+          type="search"
+          name="codigo"
+          id="codProdutos"
+          placeholder="Informe o código do produto"
+          size="25"
+          pattern="[0-9]{3}"
+          title="Digite o código no formato ex: 123"
+          aria-label="Campo de persquisa: Digite o código no formato ex: 123"
+        />
+
+        <!-- Number -->
+        <input type="number" name="pares" min="0" step="2" />
+
+        <!-- Range -->
+        <input
+          type="range"
+          name="temperatura"
+          min="0"
+          max="60"
+          step="0.5"
+          value="36.5"
+        />
+
+        <!-- Data -->
+        <input type="date" />
+
+        <!-- Datatime-local -->
+        <input type="datetime-local" />
+
+        <!-- Month -->
+        <input type="month" />
+
+        <!-- Week -->
+        <input type="week" />
+      </div>
+    </form>
+  </body>
+</html>
