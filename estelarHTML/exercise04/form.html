@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio de Form</title>
+    <style>
+      form {
+        width: 200px;
+      }
+
+      fieldset > div {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post">
+      <fieldset>
+        <legend>Contato</legend>
+        <div>
+          <label for="setName">Nome </label> <br />
+          <input type="text" name="name" id="setName" />
+        </div>
+        <div>
+          <label for="setEmail">Email</label> <br />
+          <input type="email" name="email" id="setEmail" />
+        </div>
+        <div>
+          <label for="setMessage">Mensagem</label> <br />
+          <textarea
+            name="message"
+            id="setMessage"
+            cols="25"
+            rows="5"
+          ></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
